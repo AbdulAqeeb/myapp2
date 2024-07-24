@@ -1,0 +1,18 @@
+<div class="parent">
+    <h4>My Age is {{age}}</h4>
+    <h4>My Name is {{name}}</h4>
+    
+    <button [disabled]="!isValid">Create</button>
+    <br>
+    <br>
+    <!-- Event Binding ()=""  -->
+    
+    <button (click)="submit()">Submit</button>  
+    <input type="text" (keypress)="serach()">
+    <br><br>
+    
+    <!-- Two way binding[()] -->
+    <label for="">phone</label>
+    <input type="text" [(ngModel)]="phone">
+</div>
+

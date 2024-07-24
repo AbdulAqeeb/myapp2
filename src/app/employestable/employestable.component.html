@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>DOB</th>
+            <th>EXPERIENCE</th>
+            <th>PACKAGE</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employe of employes" [ngClass]="{abc:employe.package>10}">
+            <td>{{employe.name}}</td>
+            <td>{{employe.age}}</td>
+            <td>{{employe.dob | date : 'yyyy-MM-dd'}}</td>
+            <td [ngClass]="{'low': employe.experience<=3, 'medium': employe.experience>=3 && employe.experience<=5, 'high':employe.experience>5}">{{employe.experience}}</td>
+            <td>{{employe.package}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+  
+

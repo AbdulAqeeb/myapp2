@@ -1,0 +1,13 @@
+<h1>Event Registration</h1>
+<form>
+    <label for="">Name</label>
+    <br>
+    <input type="text" name="" id="inp" [(ngModel)]="num" name="name">
+    <br>
+    <button type="submit" class="regibut" (click)="reg()">Register</button>
+</form>
+
+
+<ol >
+    <li *ngFor="let num of names">{{num}}</li>
+</ol>

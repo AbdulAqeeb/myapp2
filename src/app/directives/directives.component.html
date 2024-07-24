@@ -1,0 +1,68 @@
+<!-- ngFor -->
+<h5 *ngFor="let age of ages">Age is :{{age}}</h5>
+
+
+<!-- ngFor with Index -->
+ <h5 *ngFor="let age of ages;let i=index">person {{i+1}} age is {{age}}</h5>
+
+ <!-- ngfor on elements -->
+<ul>
+    <li *ngFor="let state of states">{{state}}</li>
+</ul>
+<!-- dropdown List -->
+<label for="">states</label>
+<select name="" id="">
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+<!-- Array of Objects -->
+<h5 *ngFor="let product of products">
+    {{product.name}} price is {{product.price}} and rating is{{product.rating}}
+</h5>
+
+<!-- for loop table Model -->
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>RATING</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+
+        </tr>
+    </tbody>
+</table>
+<br>
+<!-- NGIF -->
+ <button *ngIf="true">submit</button>
+ <button *ngIf="false">create</button>
+ <button *ngIf="true">cancel</button>
+<br>
+ <!-- Alternate Directives -->
+
+<table border = "1">
+    <thead >
+        <tr>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>RATING</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td [ngClass]="{'low': product.price<=1000, 'medium': product.price>1000 && product.price<10000, 'high': product.price>=10000}">{{product.price}}</td>
+            <!-- <td>{{product.price}}</td> -->
+            <td [ngStyle]="{'color': product.rating<3? 'red':'green'}">{{product.rating}}</td>
+            
+        </tr>
+     </tbody>
+</table>
+ 

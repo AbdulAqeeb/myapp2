@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Border for the entire table */
+}
+
+/* Styling the table header */
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    border-right: 1px solid #ddd; /* Right border for each header cell */
+}
+
+/* Styling table rows and cells */
+td {
+    padding: 10px;
+    text-align: left;
+    border-right: 1px solid #ddd; /* Right border for each data cell */
+}
+
+/* Alternate row colors for better readability */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Conditional styling for price based on value */
+td.low {
+    color: #008000; /* Green color for low prices */
+}
+
+td.medium {
+    color: #ffa500; /* Orange color for medium prices */
+}
+
+td.high {
+    color: #ff0000; /* Red color for high prices */
+}
+
+/* Conditional styling for rating based on value */
+td.rating-low {
+    color: #ff0000; /* Red color for low ratings */
+}
+
+td.rating-high {
+    color: #008000; /* Green color for high ratings */
+}
