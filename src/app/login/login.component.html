@@ -1,17 +1,18 @@
-<p>login works!</p>
+
+
 <div class="parent">
     <div class="child">
-        <form action="">
+        <form [formGroup]="loginForm">
             <h1>Login</h1>
-            <input type="text" placeholder="Email" id="">
+            <label>Email:</label>
+            <input type="text" placeholder="Email" id="" formControlName="email">
             <br><br>
-            <input type="text" placeholder="Password" id="">
+            <label>Password</label>
+            <input type="text" placeholder="Password" id="" formControlName="password">
             <br>
-            <button routerLink="/dashboard">Login</button>
             <br><hr>
-            <button>Login With Google</button>
-            <br>
-            <button>Login With Facebook</button>
+            <button (click)="login()">Login</button>
         </form>
     </div>
 </div>
+

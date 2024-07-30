@@ -1,0 +1,64 @@
+<input type="search" [(ngModel)]="term" (keyup)="Filter()">
+
+<label>column</label>
+<select name="" id="" [(ngModel)]="column">
+    <option>account_name</option>
+    <option>account_balance</option>
+    <option>account_number</option>
+    <option>id</option>
+</select>
+
+<label>order</label>
+<select name="" id="" [(ngModel)]="order">
+    <option>asc</option>
+<option>desc</option>
+</select>
+
+<button (click)="sort()">sort</button>
+
+<br><br>
+
+<label>limit</label>
+<select name="" id="" [(ngModel)]="limit">
+    <option value="">10</option>
+    <option value="">20</option>
+    <option value="">30</option>
+    <option value="">40</option>
+
+</select>
+
+<label for="">pageNo</label>
+<select name="" id="" [(ngModel)]="pageNo">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+
+</select>
+
+<button (click)="page()">page</button>
+
+<table >
+    <thead>
+        <tr>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>city</th>
+            <th>profile_picture</th>
+            <th>id</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let account of accounts" >
+                <td>{{account.account_name}}</td>
+                <td>{{account.available_balance}}</td>
+                <td>{{account.account_number}}</td>
+                <td>{{account.city}}</td>
+                <td><img src="{{account.profie_picture}}" alt="" width="100px"></td>
+                <td>{{account.id}}</td>
+            </tr>
+    </tbody>
+</table>
+
+

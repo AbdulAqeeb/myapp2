@@ -13,11 +13,18 @@ import { EmployestableComponent } from './employestable/employestable.component'
 import { EventregistrationComponent } from './eventregistration/eventregistration.component';
 import { CartComponent } from './cart/cart.component';
 import { FlipcartComponent } from './flipcart/flipcart.component';
-import { EmailComponent } from './email/email.component';
+import { AccountComponent } from './account/account.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { CreateuserComponent } from './createuser/createuser.component';
+import { NotifyGuard } from './notify.guard';
+import { CalcualtorComponent } from './calcualtor/calcualtor.component';
+import { ParentComponent } from './parent/parent.component';
+// import { EmailComponent } from './email/email.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent, children:[
+  {path:'dashboard', canActivate:[AuthenticationGuard],  component:DashboardComponent, children:[
     {path:'welcome', component:WelcomeComponent},
     {path:'home', component:HomeComponent},
     {path:'about', component:AboutComponent},
@@ -28,7 +35,12 @@ const routes: Routes = [
     {path:'eventregistration',component:EventregistrationComponent},
     {path:'cart', component:CartComponent},
     {path:'flipcart', component:FlipcartComponent},
-    {path:'email', component:EmailComponent},
+    // {path:'email', component:EmailComponent},
+    {path:'account', component:AccountComponent},
+    {path:'create-account', component:CreateAccountComponent},
+    {path:'createuser',canActivate:[NotifyGuard], component:CreateuserComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'calculator',component:CalcualtorComponent},
   ]},
   {path:'', component:LoginComponent},
   {path:'**', component:PagenotfoundComponent},

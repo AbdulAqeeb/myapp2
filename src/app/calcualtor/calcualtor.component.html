@@ -1,0 +1,16 @@
+<p>calcualtor works!</p>
+<label for="">Num1</label>
+<input type="number" [(ngModel)]="num1">
+<br>
+<label for="">num2</label>
+<input type="number" [(ngModel)]="num2">
+
+<p>{{result}}</p>
+
+<app-operations [n1]="num1"  [n2]="num2" (result)="catch($event)"></app-operations>
+
+<div class="box" >
+    <app-child></app-child>
+</div>
+
+

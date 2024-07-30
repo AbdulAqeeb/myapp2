@@ -12,14 +12,17 @@
         <h2 routerLink="eventregistration">EventRegistration</h2>
         <h2 routerLink="cart">Cart</h2>
         <h2 routerLink="flipcart">Flipcart</h2>
-        <h2 routerLink="Email">Flipcart</h2>
-
+        <h2 routerLink="account">Account</h2>
+        <h2 routerLink="create-account">Create-Account</h2>
+        <!-- <h2 routerLink="email">Email</h2> -->
+        <h2 routerLink="parent">Parent</h2>
+        <h2 routerLink="calculator">Calculator</h2>
         <br>
-        <button routerLink="/login">Logout</button>
+        <button (click)="logout()">Logout</button>
 
     </div>
     <div class="right">
         <router-outlet></router-outlet>
     </div>
-    
+
 </div>
