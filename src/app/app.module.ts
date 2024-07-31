@@ -25,12 +25,14 @@ import { CreateuserComponent } from './createuser/createuser.component';
 import { CapitalDirective } from './capital.directive';
 import { PricePipe } from './price.pipe';
 import { ChildComponent } from './child/child.component';
-// import { ParentComponent } from './parent/parent.component';
+import { ParentComponent } from './parent/parent.component';
 import { SiblingComponent } from './sibling/sibling.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { CalcualtorComponent } from './calcualtor/calcualtor.component';
 import { OperationsComponent } from './operations/operations.component';
-import { ParentComponent } from './parent/parent.component';
+// import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { MyntraComponent } from './myntra/myntra.component';
+import { RatingParentComponent } from './rating-parent/rating-parent.component';
 
 @NgModule({
   declarations: [
@@ -54,12 +56,15 @@ import { ParentComponent } from './parent/parent.component';
     CapitalDirective,
     PricePipe,
     ChildComponent,
-    // ParentComponent,
+    ParentComponent,
     SiblingComponent,
     Sibling2Component,
     CalcualtorComponent,
     OperationsComponent,
     ParentComponent,
+    // RatingParentComponent,
+    MyntraComponent,
+    RatingParentComponent,
   ],
   imports: [
     BrowserModule,

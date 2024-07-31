@@ -20,6 +20,8 @@ import { CreateuserComponent } from './createuser/createuser.component';
 import { NotifyGuard } from './notify.guard';
 import { CalcualtorComponent } from './calcualtor/calcualtor.component';
 import { ParentComponent } from './parent/parent.component';
+// import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { MyntraComponent } from './myntra/myntra.component';
 // import { EmailComponent } from './email/email.component';
 
 const routes: Routes = [
@@ -35,12 +37,14 @@ const routes: Routes = [
     {path:'eventregistration',component:EventregistrationComponent},
     {path:'cart', component:CartComponent},
     {path:'flipcart', component:FlipcartComponent},
+    {path:'myntra', component:MyntraComponent},
     // {path:'email', component:EmailComponent},
     {path:'account', component:AccountComponent},
     {path:'create-account', component:CreateAccountComponent},
     {path:'createuser',canActivate:[NotifyGuard], component:CreateuserComponent},
     {path:'parent',component:ParentComponent},
     {path:'calculator',component:CalcualtorComponent},
+    // {path:'rating-parent',component:RatingParentComponent}
   ]},
   {path:'', component:LoginComponent},
   {path:'**', component:PagenotfoundComponent},
