@@ -30,9 +30,9 @@ import { SiblingComponent } from './sibling/sibling.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { CalcualtorComponent } from './calcualtor/calcualtor.component';
 import { OperationsComponent } from './operations/operations.component';
-// import { RatingParentComponent } from './rating-parent/rating-parent.component';
 import { MyntraComponent } from './myntra/myntra.component';
 import { RatingParentComponent } from './rating-parent/rating-parent.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -62,7 +62,6 @@ import { RatingParentComponent } from './rating-parent/rating-parent.component';
     CalcualtorComponent,
     OperationsComponent,
     ParentComponent,
-    // RatingParentComponent,
     MyntraComponent,
     RatingParentComponent,
   ],
@@ -72,6 +71,7 @@ import { RatingParentComponent } from './rating-parent/rating-parent.component';
     FormsModule,
    HttpClientModule,
    ReactiveFormsModule,
+   AboutUsModule,
 
     
   ],
