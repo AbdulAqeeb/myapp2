@@ -1,8 +1,5 @@
-<p>child works!</p>
+<p>A from parents</p>
 
-<p>A from parent : {{ac}}</p>
+<h2>A from parent: {{ac}} </h2>
 
-<input type="text" [(ngModel)]="bc">
-
-<button put type="text" [(ngModel)]="bc" (keyup) ="send()"
->Send</button>
+<input type="text" [(ngModel)]="bc" (keyup)="send()">

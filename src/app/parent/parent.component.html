@@ -1,7 +1,9 @@
 <p>parent works!</p>
 
 <input type="text" [(ngModel)]="ap">
+
 <p>B in parent : {{bp}}</p>
+
 <div class="box">
     <app-child [ac]="ap" (bEvent)="catch($event)"></app-child>
 </div>

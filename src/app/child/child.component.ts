@@ -19,7 +19,7 @@ export class ChildComponent {
 
   send(){
     // EVENT EMIT
-    this.bEvent.emit(this.bc);7
+    this.bEvent.emit(this.bc);
   
   }
 }

@@ -33,6 +33,12 @@ import { OperationsComponent } from './operations/operations.component';
 import { MyntraComponent } from './myntra/myntra.component';
 import { RatingParentComponent } from './rating-parent/rating-parent.component';
 import { AboutUsModule } from './about-us/about-us.module';
+// import { TextAreaComponent } from './text-area/text-area.component';
+// import { TextAreachildComponent } from './text-areachild/text-areachild.component';
+import { ParentCarditemComponent } from './parent-carditem/parent-carditem.component';
+import { ChildCarditemComponent } from './parent-carditem/child-carditem/child-carditem.component';
+import { Sibling1Component } from './parent-carditem/sibling1/sibling1.component';
+import { Silbling3Component } from './parent-carditem/silbling3/silbling3.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +70,12 @@ import { AboutUsModule } from './about-us/about-us.module';
     ParentComponent,
     MyntraComponent,
     RatingParentComponent,
+    // TextAreaComponent,
+    // TextAreachildComponent,
+    ParentCarditemComponent,
+    ChildCarditemComponent,
+    Sibling1Component,
+    Silbling3Component,
   ],
   imports: [
     BrowserModule,

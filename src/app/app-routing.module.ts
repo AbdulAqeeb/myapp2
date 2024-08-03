@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -25,6 +25,7 @@ import { MyntraComponent } from './myntra/myntra.component';
 // import { RatingParentComponent } from './rating-parent/rating-parent.component';
 
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { ParentCarditemComponent } from './parent-carditem/parent-carditem.component';
 // import { EmailComponent } from './email/email.component';
 
 const routes: Routes = [
@@ -48,14 +49,20 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'calculator',component:CalcualtorComponent},
     {path:'rating-parent',component:RatingParentComponent},
-    {path:'aboutcompany',component:AboutCompanyComponent}
+    {path:'aboutcompany',component:AboutCompanyComponent},
+    {path:'parent-carditem', component:ParentCarditemComponent},
+    {
+      path: 'payments',
+      loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+    }
+
   ]},
   {path:'', component:LoginComponent},
   {path:'**', component:PagenotfoundComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

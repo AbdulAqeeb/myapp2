@@ -1,8 +1,7 @@
 <p>rating-parent works!</p>
 
-<img src="src\assets\1star.png" alt="" width="150px">
-<img src="src\assets\2star.png" alt="" width="150px">
-<img src="src\assets\3star.png" alt="">
-<img src="src\assets\4stars.png" alt="">
-<img src="src\assets\5stars.png" alt="">
-
+<img src="src\assets\1star.png" *ngIf="rating >= 1 && rating < 2" width="100px">
+<img src="src\assets\2star.png" *ngIf="rating >= 2 && rating < 3" width="150px">
+<img src="src\assets\3star.png" *ngIf="rating >= 3 && rating < 4" width="100px">
+<img src="src\assets\4stars.png" *ngIf="rating >= 4 && rating < 5" width="100px">
+<img src="src\assets\5stars.png" *ngIf="rating >= 5" width="100px">
