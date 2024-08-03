@@ -51,6 +51,7 @@ const routes: Routes = [
     {path:'rating-parent',component:RatingParentComponent},
     {path:'aboutcompany',component:AboutCompanyComponent},
     {path:'parent-carditem', component:ParentCarditemComponent},
+    {path:'about-ceo'},
     {
       path: 'payments',
       loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
