@@ -40,7 +40,7 @@ const routes: Routes = [
     {path:'employestable', component:EmployestableComponent},
     {path:'eventregistration',component:EventregistrationComponent},
     {path:'cart', component:CartComponent},
-    {path:'flipcart', component:FlipcartComponent},
+    {path:'flipcart-two', component:FlipcartComponent},
     {path:'myntra', component:MyntraComponent},
     // {path:'email', component:EmailComponent},
     {path:'account', component:AccountComponent},
@@ -52,6 +52,7 @@ const routes: Routes = [
     {path:'aboutcompany',component:AboutCompanyComponent},
     {path:'parent-carditem', component:ParentCarditemComponent},
     {path:'about-ceo'},
+    {path:'one-user-path'},
     {
       path: 'payments',
       loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
