@@ -51,6 +51,7 @@ const routes: Routes = [
     {path:'rating-parent',component:RatingParentComponent},
     {path:'aboutcompany',component:AboutCompanyComponent},
     {path:'parent-carditem', component:ParentCarditemComponent},
+    {path:'about-ceo'},
     {path:'one-user-path'},
     {
       path: 'payments',
